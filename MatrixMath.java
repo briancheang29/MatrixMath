@@ -27,7 +27,17 @@ public class MatrixMath
      */
     public int[] rowSum()
     {
-        return null;
+        int[]sumRow=new int[data.length];
+        for(int i=0;i<data.length;i++)
+        {
+            int sum=0;
+            for(int j=0;j<data[i].length; j++)
+            {
+                sum+=data[i][j];
+            }
+        sumRow[i]=sum;
+    }
+    return sumRow;
     }
     
         /**
@@ -37,7 +47,13 @@ public class MatrixMath
      */
     public double[] rowAve()
     {
-        return null;
+        double[]aveRow=new double[data.length];
+        int[]sums=rowSum();
+        for(int i=0; i<data.length; i++)
+        {
+        aveRow[i]=(sums[i]*1.0)/data[i].length;
+        }
+        return aveRow;
     }
     
         /**
